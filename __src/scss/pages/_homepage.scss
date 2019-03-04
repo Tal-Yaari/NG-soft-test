@@ -1,0 +1,279 @@
+body {
+
+}
+
+.site-header {
+	.top-title {
+		background-color: #094fa4;
+		display: block;
+		width: 100%;
+		color: #fff;
+		text-align: center;
+	}
+
+	.main-menu {
+		position: relative;
+
+		@include tablet {
+			flex-wrap: nowrap;
+			padding: 10px 20px;
+		}
+
+		@include desktop {
+			padding: 10px 40px;
+		}
+
+
+
+		.logo-wrapper {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+			@include tablet {
+				width: 12%;
+			}
+
+			@include desktop {
+				width: 15%;
+			}
+
+			img {
+				max-width: 100%;
+				width: auto;
+				height: auto;
+				display: block;
+			}
+		}
+
+		.navbar-toggler {
+			@include tablet {
+				display: none;
+			}
+		}
+
+		.navbar-collapse {
+			@include tablet {
+				display: flex!important;
+				flex-basis: auto;
+				width: 70%;
+			}
+
+			.menu-links {
+				width: 100%;
+				padding: 0;
+				justify-content: center;
+				text-align: right;
+
+				@include tablet {
+					flex-direction: row;
+				}
+
+				li {
+					a {
+						position: relative;
+						color: #000;
+						transition: all ease .3s;
+
+						@include tablet {
+							padding-right: 0.2em;
+							padding-left: 0.2em;
+						}
+
+						@include desktop {
+							padding-right: 0.8em;
+							padding-left: 0.8em;
+						}
+					}
+
+					&:hover,
+					&:focus {
+						font-weight: 500;
+					}
+
+					& + li {
+						@include tablet {
+							a::before {
+								content: '|';
+								position: absolute;
+								color: #7D7D7D;
+								top: 0;
+								bottom: 0;
+								display: flex;
+								align-items: center;
+								font-size: 25px;
+								right: -3px;
+								font-weight: 300;
+
+							}
+						}
+					}
+				}
+
+				.dropdown-menu {
+					border: none;
+					background-color: transparent;
+					text-align: right;
+
+					a {
+						transition: all ease .3s;
+						font-weight: 300;
+
+						&:hover,
+						&:focus {
+							font-weight: 500;
+						}
+
+						&::before {
+							content: none;
+						}
+					}
+				}
+			}
+		}
+
+		.social-links {
+			justify-content: flex-end;
+			flex-direction: row;
+			display: flex!important;
+			flex-basis: auto;
+			padding: 0;
+
+			@include tablet {
+				width: 15%;
+			}
+
+			li {
+				border-radius: 50%;
+				transition: all ease .3s;
+				width: 35px;
+				height: 35px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				& + li {
+					margin-right: 10px;
+				}
+
+				i {
+					color: #fff;
+				}
+			}
+
+			.instagram {
+				background-color: #7D7D7D;
+
+				&:hover,
+				&:focus {
+					background-color: #c1c1c1;
+				}
+			}
+
+			.youtube {
+				background-color: #df2b24;
+
+				&:hover,
+				&:focus {
+					background-color: #ff1600;
+				}
+
+			}
+
+			.facebook {
+				background-color: #024eab;
+
+				&:hover,
+				&:focus {
+					background-color: #024EDE;
+				}
+			}
+		}
+	}
+
+	.slider-carousel {
+		width: 100%;
+
+		.banners {
+			display: inline-block;
+
+			img {
+
+			}
+		}
+	}
+
+}
+
+.main-content {
+
+
+}
+
+.site-footer {
+	.details-wrapper {
+		position: relative;
+		background: transparent url( '../images/wood.png' ) no-repeat center;
+		background-size: cover;
+		z-index: 7;
+		padding: 20px;
+
+		&::before {
+			content: ' ';
+			background-color: #000;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			opacity: 0.7;
+			z-index: -1;
+		}
+
+		.user-options {
+			display: flex;
+			justify-content: right;
+			text-align: right;
+			color: #fff;
+			z-index: 444;
+
+			li {
+				& + li {
+					margin-right: 40px;
+				}
+
+				h3 {
+					font-size: 20px;
+				}
+
+				p {
+					font-size: 16px;
+				}
+
+				button {
+					font-size: 20px;
+					color: #024eab;
+				}
+
+				form {
+					.form-group {
+						position: relative;
+					}
+
+					button {
+						position: absolute;
+						color: #fff;
+						background-color: #024eab;
+						border: none;
+						top: 0;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+

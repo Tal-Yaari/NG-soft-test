@@ -1,0 +1,70 @@
+/* Common */
+@import "colors";
+@import "mixins";
+
+/* General */
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	direction: rtl;
+}
+
+.container-fluid {
+	width: 100%;
+}
+
+.screen-reader-text,
+.sr-only {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+
+.container {
+	max-width: 1200px;
+}
+
+
+.container-fluid {
+	padding: 0;
+}
+
+.list-unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+
+
+/* Vendor */
+@import "vendor/normalize";
+
+/* Partials */
+
+
+/* Pages */
+@import "pages/homepage";
+
+
