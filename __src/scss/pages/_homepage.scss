@@ -208,6 +208,7 @@ body {
 .main-content {
 
 	.lorem-ipsum {
+		padding: 80px 0;
 
 		h2 {
 			text-align: center;
@@ -234,74 +235,90 @@ body {
 
 		}
 
-			.grid {
+			.grid-container {
 				display: block;
 			}
 
-			.box {
+			.grid-item {
 				padding: 10px;
 				position: relative;
 			}
 
 			@include tablet {
-				.grid {
+				.grid-container {
 					display: grid;
-					grid-template-rows: 220px 70px 220px;
+					//grid-template-rows: 200px 200px 200px;
 					//grid-template-rows: repeat(3, 1fr);
-					grid-template-columns: repeat(2, 1fr);
-					grid-auto-flow: column;
-					grid-gap: 10px;
+					//grid-template-columns: repeat(2, 1fr);
+					//grid-auto-flow: column;
+					grid-gap: 30px;
 				}
 
-				.box {
+				.grid-item {
 					margin: 0;
-
-					.description {
-						width: 100%;
-						height: 100%;
-						position: absolute;
-
-					}
+					position: relative;
+					padding: 0;
 
 					.description-large, .description-short {
 						background-color: #094fa3;
 					}
-
-					.description-large {
-						width: calc(100% - 20px);
-						bottom: 0;
-						height: 20%;
-						right: 10px;
-					}
-
-
-					.description-short {
-						width: 30%;
-						height: calc(100% - 20px);
-						top: 10px;
-						right: 0;
-						bottom: 0;
-					}
-
 				}
 
-				.box.short {
-					grid-row: span 1;
+				.grid-item.large {
+					a {
+						display: flex;
+						flex-direction: column;
 
-					img {
-						width: 100%;
-						height: 100%;
+						img {
+							width: 100%;
+							height: 100%;
+						}
+
+						.description-large {
+							position: absolute;
+							bottom: 0;
+							right: 0;
+							left: 0;
+						}
 					}
 				}
 
-				.box.large {
-					grid-row: span 2;
+				.grid-item.short {
+					a {
+						display: flex;
+						flex-direction: row-reverse;
 
-					img {
-						width: 100%;
-						height: 100%;
+						img {
+							width: 70%;
+							height: 100%;
+						}
+
+						.description-short {
+							width: 30%;
+						}
 					}
 				}
+
+				.grid-item.large1 {
+					grid-column: 1 ;
+					grid-row: 1 / span 3;
+				}
+
+				.grid-item.large2 {
+					grid-column: 2;
+					grid-row: 2 / span 3;
+				}
+
+				.grid-item.short1 {
+					grid-column: 1;
+					grid-row: 4 / span 1;
+				}
+
+				.grid-item.short2 {
+					grid-column: 2;
+					grid-row: 1 / span 1;
+				}
+
 			}
 
 	}
