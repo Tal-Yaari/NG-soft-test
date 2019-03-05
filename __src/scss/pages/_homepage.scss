@@ -23,12 +23,12 @@ body {
 			padding: 10px 40px;
 		}
 
-
-
 		.logo-wrapper {
 			width: 100%;
 			display: flex;
 			justify-content: center;
+			margin-top: -20px;
+			margin-bottom: -40px;
 
 			@include tablet {
 				width: 12%;
@@ -207,6 +207,106 @@ body {
 
 .main-content {
 
+	.lorem-ipsum {
+
+		h2 {
+			text-align: center;
+			position: relative;
+			display: inline-block;
+
+			&::before,
+			&::after {
+				position: absolute;
+				content: ' ';
+				top: 50%;
+				width: 60px;
+				height: 1px;
+				background-color: #000;
+			}
+
+			&::before {
+				right: -80px;
+			}
+
+			&::after {
+				left: -80px;
+			}
+
+		}
+
+			.grid {
+				display: block;
+			}
+
+			.box {
+				padding: 10px;
+				position: relative;
+			}
+
+			@include tablet {
+				.grid {
+					display: grid;
+					grid-template-rows: 220px 70px 220px;
+					//grid-template-rows: repeat(3, 1fr);
+					grid-template-columns: repeat(2, 1fr);
+					grid-auto-flow: column;
+					grid-gap: 10px;
+				}
+
+				.box {
+					margin: 0;
+
+					.description {
+						width: 100%;
+						height: 100%;
+						position: absolute;
+
+					}
+
+					.description-large, .description-short {
+						background-color: #094fa3;
+					}
+
+					.description-large {
+						width: calc(100% - 20px);
+						bottom: 0;
+						height: 20%;
+						right: 10px;
+					}
+
+
+					.description-short {
+						width: 30%;
+						height: calc(100% - 20px);
+						top: 10px;
+						right: 0;
+						bottom: 0;
+					}
+
+				}
+
+				.box.short {
+					grid-row: span 1;
+
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.box.large {
+					grid-row: span 2;
+
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+
+	}
+
+
 
 }
 
@@ -216,7 +316,7 @@ body {
 		background: transparent url( '../images/wood.png' ) no-repeat center;
 		background-size: cover;
 		z-index: 7;
-		padding: 20px;
+		padding: 40px 0;
 
 		&::before {
 			content: ' ';
@@ -232,14 +332,31 @@ body {
 
 		.user-options {
 			display: flex;
-			justify-content: right;
+			justify-content: center;
 			text-align: right;
 			color: #fff;
 			z-index: 444;
+			flex-wrap: wrap;
+
+			@include tablet {
+				justify-content: right;
+			}
 
 			li {
+				text-align: center;
+				width: 100%;
+
+				@include tablet {
+					text-align: right;
+					width: 40%;
+				}
+
 				& + li {
-					margin-right: 40px;
+					margin-top: 20px;
+
+					@include tablet {
+						margin-top: 0;
+					}
 				}
 
 				h3 {
@@ -253,11 +370,27 @@ body {
 				button {
 					font-size: 20px;
 					color: #024eab;
+					border-radius: 10px;
+
+					@include tablet {
+						padding: 5px 30px;
+					}
 				}
 
 				form {
 					.form-group {
 						position: relative;
+						width: 100%;
+						margin: 0 auto;
+
+						@include tablet {
+							width: 80%;
+							margin: 0;
+						}
+					}
+
+					input {
+						border-radius: 30px;
 					}
 
 					button {
@@ -265,10 +398,113 @@ body {
 						color: #fff;
 						background-color: #024eab;
 						border: none;
-						top: 0;
-						left: 0;
+						left: 5px;
+						bottom: 5px;
+						font-size: 18px;
+						border-radius: 40px;
+						padding: 0 15px;
+
+						&:hover,
+						&:focus {
+							background-color: #fff;
+							color: #024eab;
+						}
 					}
 				}
+			}
+		}
+	}
+
+	.footer-nav-wrapper {
+		.footer-links {
+			padding: 10px 0;
+			display: flex;
+			justify-content: space-between;
+
+			.links {
+				display: flex;
+				justify-content: space-between;
+				width: 70%;
+
+				li {
+					transition: all ease .3s;
+					position: relative;
+
+					a {
+						color: #024eab;
+						text-decoration: none;
+						position: relative;
+						font-weight: 500;
+
+						&:hover::before,
+						&:focus::before {
+							content: ' ';
+							width: 100%;
+							bottom: 0;
+							position: absolute;
+							height: 1px;
+							background-color: #024eab;
+							right: 0;
+						}
+					}
+				}
+			}
+
+			.footer-social-links {
+				width: 10%;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: row;
+				padding: 0;
+
+				li {
+					border-radius: 50%;
+					transition: all ease .3s;
+					width: 35px;
+					height: 35px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+
+					a {
+						display: inline-block;
+						color: unset;
+
+						i {
+							color: #fff;
+						}
+					}
+				}
+
+				.instagram {
+					background-color: #7D7D7D;
+
+					&:hover,
+					&:focus {
+						background-color: #c1c1c1;
+					}
+				}
+
+				.youtube {
+					background-color: #df2b24;
+
+					&:hover,
+					&:focus {
+						background-color: #ff1600;
+					}
+
+				}
+
+				.facebook {
+					background-color: #024eab;
+
+					&:hover,
+					&:focus {
+						background-color: #024EDE;
+					}
+				}
+
 			}
 		}
 	}
