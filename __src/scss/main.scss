@@ -11,7 +11,10 @@
 }
 
 body {
+	@import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
 	direction: rtl;
+	font-family: 'Open sans Hebrew', sans-serif;
+
 }
 
 .container-fluid {
@@ -32,7 +35,7 @@ body {
 
 
 .container {
-	max-width: 1200px;
+
 }
 
 
