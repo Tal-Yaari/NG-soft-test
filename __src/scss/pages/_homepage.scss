@@ -207,6 +207,101 @@ body {
 
 .main-content {
 
+	.deals {
+		padding: 40px 0;
+		
+		h2 {
+			text-align: center;
+			position: relative;
+			display: inline-block;
+			margin: 0 0 50px;
+
+			&::before,
+			&::after {
+				position: absolute;
+				content: ' ';
+				top: 50%;
+				width: 60px;
+				height: 1px;
+				background-color: #000;
+			}
+
+			&::before {
+				right: -80px;
+			}
+
+			&::after {
+				left: -80px;
+			}
+		}
+
+		.top-deals {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			li {
+				width: 30%;
+				position: relative;
+
+				a {
+					img {
+						width: 100%;
+						height: auto;
+					}
+
+					.description {
+						color: #fff;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						background-color: #094fa3;
+						display: flex;
+						align-items: center;
+						padding: 5px;
+
+						.description-wrapper {
+							width: 80%;
+							text-align: right;
+							padding: 0 60px 0 0;
+							position: relative;
+
+							&::before {
+								position: absolute;
+								background: transparent url( "../images/tag.png" ) no-repeat right;
+								width: 100%;
+								height: 100%;
+								right: 10px;
+								z-index: 1;
+								content: ' ';
+
+							}
+
+							p {
+								font-size: 20px;
+								font-weight: 300;
+								margin: 0;
+							}
+
+							span {
+								font-size: 18px;
+								font-weight: 500;
+							}
+						}
+
+						i {
+							font-size: 30px;
+						}
+
+					}
+				}
+			}
+		}
+
+
+	}
+
 	.clients-club {
 		padding: 40px 0;
 		position: relative;
@@ -677,17 +772,36 @@ body {
 	.footer-nav-wrapper {
 		.footer-links {
 			padding: 10px 0;
-			display: flex;
-			justify-content: space-between;
 
-			.links {
+			@include tablet {
 				display: flex;
 				justify-content: space-between;
-				width: 70%;
+			}
+			.links {
+				width: 100%;
+
+				@include tablet {
+					display: flex;
+					justify-content: space-between;
+					width: 70%;
+				}
 
 				li {
 					transition: all ease .3s;
 					position: relative;
+					text-align: center;
+
+					@include tablet {
+						text-align: right;
+					}
+
+					& + li {
+						margin-top: 20px;
+
+						@include tablet {
+							margin-top: 0;
+						}
+					}
 
 					a {
 						color: #024eab;
@@ -710,11 +824,22 @@ body {
 			}
 
 			.footer-social-links {
-				width: 10%;
+				margin: 20px 0;
+				width: 100%;
 				display: flex;
-				justify-content: space-between;
-				flex-direction: row;
 				padding: 0;
+				flex-direction: row;
+				justify-content: space-evenly;
+
+				@include tablet {
+					width: 20%;
+					justify-content: space-between;
+					margin: 0;
+				}
+
+				@include desktop {
+					width: 10%;
+				}
 
 				li {
 					border-radius: 50%;
@@ -724,7 +849,6 @@ body {
 					display: flex;
 					align-items: center;
 					justify-content: center;
-
 
 					a {
 						display: inline-block;
