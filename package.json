@@ -1,20 +1,8 @@
 {
-  "name": "wp_theme_ofek_art",
+  "name": "ng-soft",
   "version": "1.0.0",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/dorzki/WP_Theme_Ofek_Art.git"
-  },
-  "author": "Dor Zuberi",
   "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/dorzki/WP_Theme_Ofek_Art/issues"
-  },
-  "homepage": "https://gitlab.com/dorzki/WP_Theme_Ofek_Art#README",
   "dependencies": {
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1"

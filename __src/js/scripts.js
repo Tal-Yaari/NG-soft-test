@@ -1,20 +1,16 @@
 ( function ( $ ) {
 
-
-	$(document).ready(function() {
-		$( '.slider-carousel' ).slick( {
+	window.onload=function() {
+		$( '.banner-carousel' ).slick( {
 			infinite : true,
 			arrows : false,
+			autoplay : true,
 			slidesToShow : 1,
 			slidesToScroll : 1,
-			dots: false,
-			speed: 500,
-			fade: true,
-			rtl: true,
-			cssEase: 'linear'
+			autoplaySpeed : 1000,
+			rtl : true,
 		} );
-	});
-
+	};
 
 } )( jQuery );
 
