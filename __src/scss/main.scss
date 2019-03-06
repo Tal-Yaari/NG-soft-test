@@ -14,7 +14,6 @@ body {
 	@import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
 	direction: rtl;
 	font-family: 'Open sans Hebrew', sans-serif;
-
 }
 
 .container-fluid {
@@ -32,12 +31,6 @@ body {
 	position: absolute;
 	width: 1px;
 }
-
-
-.container {
-
-}
-
 
 .container-fluid {
 	padding: 0;
@@ -57,17 +50,12 @@ a {
 	text-decoration: none;
 }
 
-
-
-
-
 /* Vendor */
 @import "vendor/normalize";
 @import "vendor/slick";
 @import "vendor/slick-theme";
 
 /* Partials */
-
 
 /* Pages */
 @import "pages/homepage";

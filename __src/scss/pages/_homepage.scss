@@ -1,7 +1,4 @@
-body {
-
-}
-
+/* Header */
 .site-header {
 	.top-title {
 		background-color: #094fa4;
@@ -86,7 +83,6 @@ body {
 				}
 
 				li {
-
 					a.dropdown-toggle, a.nav-link {
 						position: relative;
 						color: #000;
@@ -302,7 +298,7 @@ body {
 	}
 }
 
-
+/* Main */
 .main-content {
 	margin-top: -10px;
 
@@ -409,7 +405,6 @@ body {
 					}
 				}
 
-
 				& + li::before {
 					content: ' ';
 					position: absolute;
@@ -489,7 +484,6 @@ body {
 		}
 
 		.top-deals {
-
 			@include tablet {
 				display: flex;
 				flex-direction: row;
@@ -541,7 +535,6 @@ body {
 								right: 10px;
 								z-index: 1;
 								content: ' ';
-
 							}
 
 							p {
@@ -559,7 +552,6 @@ body {
 						i {
 							font-size: 30px;
 						}
-
 					}
 				}
 
@@ -572,8 +564,6 @@ body {
 				}
 			}
 		}
-
-
 	}
 
 	.clients-club {
@@ -632,8 +622,6 @@ body {
 
 						img {
 							position: relative;
-
-
 						}
 					}
 				}
@@ -645,7 +633,6 @@ body {
 						width: 260px;
 						bottom: 0;
 					}
-
 				}
 			}
 		}
@@ -696,7 +683,6 @@ body {
 			&::after {
 				left: -80px;
 			}
-
 		}
 
 		.container {
@@ -991,6 +977,16 @@ body {
 					font-size: 16px;
 				}
 
+				.email-sent {
+					display: none;
+				}
+
+				.message {
+					display: block;
+					color: #df2b24;
+					font-weight: 500;
+				}
+
 				button {
 					font-size: 20px;
 					color: #024eab;
@@ -1010,7 +1006,7 @@ body {
 					}
 				}
 
-				form {
+				.update-form {
 					.form-group {
 						position: relative;
 						width: 100%;
@@ -1045,10 +1041,15 @@ body {
 						}
 					}
 				}
+
+				.sent {
+					display: none;
+				}
 			}
 		}
 	}
 
+	/* Footer */
 	.footer-nav-wrapper {
 		.footer-links {
 			padding: 10px 0;
@@ -1168,7 +1169,6 @@ body {
 						background-color: #024EDE;
 					}
 				}
-
 			}
 		}
 	}
