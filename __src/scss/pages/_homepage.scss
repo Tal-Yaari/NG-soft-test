@@ -13,10 +13,14 @@ body {
 
 	.main-menu {
 		position: relative;
+		justify-content: space-between;
 
 		@include tablet {
-			flex-wrap: nowrap;
 			padding: 10px 20px;
+		}
+
+		@media(min-width: 992px) {
+			flex-wrap: wrap !important;
 		}
 
 		@include desktop {
@@ -24,18 +28,14 @@ body {
 		}
 
 		.logo-wrapper {
-			width: 100%;
+			width: 30%;
 			display: flex;
 			justify-content: center;
 			margin-top: -20px;
 			margin-bottom: -40px;
 
-			@include tablet {
-				width: 12%;
-			}
-
 			@include desktop {
-				width: 15%;
+				width: 10%;
 			}
 
 			img {
@@ -47,16 +47,27 @@ body {
 		}
 
 		.navbar-toggler {
-			@include tablet {
-				display: none;
+			@media(min-width: 992px) {
+				display: inline-block !important;
+			}
+
+			@include desktop {
+				display: none !important;
 			}
 		}
 
+
 		.navbar-collapse {
-			@include tablet {
+			padding-top: 40px;
+
+			@media(min-width: 992px) {
+				display: none !important;
+			}
+
+			@include desktop {
 				display: flex!important;
-				flex-basis: auto;
-				width: 70%;
+				padding-top: 0;
+				width: 90%;
 			}
 
 			.menu-links {
@@ -65,7 +76,11 @@ body {
 				justify-content: center;
 				text-align: right;
 
-				@include tablet {
+				@media (min-width: 992px) {
+					flex-direction: column;
+				}
+
+				@include desktop {
 					flex-direction: row;
 				}
 
@@ -75,24 +90,20 @@ body {
 						color: #000;
 						transition: all ease .3s;
 
-						@include tablet {
-							padding-right: 0.2em;
-							padding-left: 0.2em;
-						}
-
 						@include desktop {
-							padding-right: 0.8em;
-							padding-left: 0.8em;
+							padding: 5px 20px;
 						}
 					}
 
 					&:hover,
 					&:focus {
-						font-weight: 500;
+						a {
+							font-weight: 700;
+						}
 					}
 
 					& + li {
-						@include tablet {
+						@include desktop {
 							a::before {
 								content: '|';
 								position: absolute;
@@ -102,7 +113,7 @@ body {
 								display: flex;
 								align-items: center;
 								font-size: 25px;
-								right: -3px;
+								right: -7px;
 								font-weight: 300;
 
 							}
@@ -132,14 +143,22 @@ body {
 			}
 		}
 
+		.show {
+			display: flex !important;
+			width: 100%;
+			flex-wrap: wrap;
+		}
+
 		.social-links {
-			justify-content: flex-end;
+			justify-content: center;
 			flex-direction: row;
 			display: flex!important;
 			flex-basis: auto;
 			padding: 0;
+			width: 100%;
 
-			@include tablet {
+			@include desktop {
+				justify-content: flex-end;
 				width: 15%;
 			}
 
@@ -736,6 +755,7 @@ body {
 						position: relative;
 						width: 100%;
 						margin: 0 auto;
+						display: flex;
 
 						@include tablet {
 							width: 80%;
