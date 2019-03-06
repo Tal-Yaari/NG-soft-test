@@ -65,7 +65,7 @@ body {
 			}
 
 			@include desktop {
-				display: flex!important;
+				display: flex !important;
 				padding-top: 0;
 				width: 90%;
 			}
@@ -141,72 +141,72 @@ body {
 					}
 				}
 			}
+
+			.social-links {
+				justify-content: center;
+				flex-direction: row;
+				display: flex !important;
+				flex-basis: auto;
+				padding: 0;
+				width: 100%;
+
+				@include desktop {
+					justify-content: flex-end;
+					width: 15%;
+				}
+
+				li {
+					border-radius: 50%;
+					transition: all ease .3s;
+					width: 35px;
+					height: 35px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					& + li {
+						margin-right: 10px;
+					}
+
+					i {
+						color: #fff;
+					}
+				}
+
+				.instagram {
+					background-color: #7D7D7D;
+
+					&:hover,
+					&:focus {
+						background-color: #c1c1c1;
+					}
+				}
+
+				.youtube {
+					background-color: #df2b24;
+
+					&:hover,
+					&:focus {
+						background-color: #ff1600;
+					}
+
+				}
+
+				.facebook {
+					background-color: #024eab;
+
+					&:hover,
+					&:focus {
+						background-color: #024EDE;
+					}
+				}
+			}
 		}
 
 		.show {
 			display: flex !important;
 			width: 100%;
 			flex-wrap: wrap;
-		}
-
-		.social-links {
-			justify-content: center;
-			flex-direction: row;
-			display: flex!important;
-			flex-basis: auto;
-			padding: 0;
-			width: 100%;
-
-			@include desktop {
-				justify-content: flex-end;
-				width: 15%;
-			}
-
-			li {
-				border-radius: 50%;
-				transition: all ease .3s;
-				width: 35px;
-				height: 35px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-
-				& + li {
-					margin-right: 10px;
-				}
-
-				i {
-					color: #fff;
-				}
-			}
-
-			.instagram {
-				background-color: #7D7D7D;
-
-				&:hover,
-				&:focus {
-					background-color: #c1c1c1;
-				}
-			}
-
-			.youtube {
-				background-color: #df2b24;
-
-				&:hover,
-				&:focus {
-					background-color: #ff1600;
-				}
-
-			}
-
-			.facebook {
-				background-color: #024eab;
-
-				&:hover,
-				&:focus {
-					background-color: #024EDE;
-				}
-			}
 		}
 	}
 
@@ -228,7 +228,7 @@ body {
 
 	.deals {
 		padding: 40px 0;
-		
+
 		h2 {
 			text-align: center;
 			position: relative;
@@ -288,7 +288,7 @@ body {
 
 							&::before {
 								position: absolute;
-								background: transparent url( "../images/tag.png" ) no-repeat right;
+								background: transparent url("../images/tag.png") no-repeat right;
 								width: 100%;
 								height: 100%;
 								right: 10px;
@@ -326,7 +326,7 @@ body {
 		position: relative;
 
 		.container-fluid {
-			background: transparent url( '../images/green_background.png' ) no-repeat center;
+			background: transparent url('../images/green_background.png') no-repeat center;
 			background-size: cover;
 			padding: 60px 0 0;
 			position: relative;
@@ -406,7 +406,7 @@ body {
 			content: ' ';
 			width: 100%;
 			height: 100%;
-			background: transparent url( '../images/half_cart.png' ) no-repeat left;
+			background: transparent url('../images/half_cart.png') no-repeat left;
 			left: 0;
 			top: 10%;
 			z-index: -1;
@@ -448,236 +448,236 @@ body {
 				width: 100%;
 				height: 100%;
 				top: 25%;
-				background: transparent url( '../images/cinamon.png' ) no-repeat right;
+				background: transparent url('../images/cinamon.png') no-repeat right;
 				right: -100px;
 				background-size: 200px;
 			}
 		}
 
-			.grid-item {
-				padding: 10px;
-				position: relative;
+		.grid-item {
+			padding: 10px;
+			position: relative;
+		}
+
+		.grid-container {
+			display: block;
+
+			@include tablet {
+				display: grid;
+				grid-gap: 20px;
+			}
+		}
+
+		.grid-item {
+			margin: 0;
+			position: relative;
+			padding: 0;
+			border: 1px solid #c9c9c9;
+
+			.description-large, .description-short {
+				background-color: #094fa3;
+
+				.description-wrapper {
+					@include tablet {
+						text-align: right;
+					}
+
+					p {
+						margin: 0;
+						font-weight: 300;
+						font-size: 16px;
+						display: block;
+
+						@include desktop {
+							font-size: 18px;
+						}
+					}
+
+					span {
+						font-weight: 500;
+						font-size: 14px;
+
+						@include desktop {
+							font-size: 16px;
+						}
+					}
+				}
 			}
 
-				.grid-container {
-					display: block;
+			& + .grid-item {
+				margin-top: 50px;
+
+				@include tablet {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.grid-item.large {
+			a {
+				display: flex;
+				flex-direction: column;
+
+				&:hover,
+				&:focus {
+					.description-large {
+						.arrow {
+							color: #000;
+						}
+					}
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+
+				.description-large {
+					color: #fff;
 
 					@include tablet {
-						display: grid;
-						grid-gap: 20px;
-					}
-				}
-
-				.grid-item {
-					margin: 0;
-					position: relative;
-					padding: 0;
-					border: 1px solid #c9c9c9;
-
-					.description-large, .description-short {
-						background-color: #094fa3;
-
-						.description-wrapper {
-							@include tablet {
-								text-align: right;
-							}
-
-							p {
-								margin: 0;
-								font-weight: 300;
-								font-size: 16px;
-								display: block;
-
-								@include desktop {
-									font-size: 18px;
-								}
-							}
-
-							span {
-								font-weight: 500;
-								font-size: 14px;
-
-								@include desktop {
-									font-size: 16px;
-								}
-							}
-						}
-					}
-
-					& + .grid-item {
-						margin-top: 50px;
-
-						@include tablet {
-							margin-top: 0;
-						}
-					}
-				}
-
-				.grid-item.large {
-					a {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						left: 0;
 						display: flex;
-						flex-direction: column;
+						justify-content: space-between;
+						align-items: center;
+						padding: 10px 30px;
+					}
 
-						&:hover,
-						&:focus {
-							.description-large {
-								.arrow {
-									color: #000;
-								}
-							}
+					.arrow {
+						font-size: 25px;
+						transition: all ease .3s;
+
+						@include desktop {
+							font-size: 30px;
+						}
+					}
+				}
+			}
+		}
+
+		.grid-item.short {
+			a {
+				display: flex;
+				flex-direction: column;
+
+				@include tablet {
+					flex-direction: row-reverse;
+					text-decoration: none;
+				}
+
+				&:hover,
+				&:focus {
+					.description-short {
+						.arrow {
+							color: #000;
+						}
+					}
+				}
+
+				img {
+					height: 100%;
+					width: 100%;
+
+					@include tablet {
+						width: 80%;
+					}
+
+					@include desktop {
+						width: 70%;
+					}
+				}
+
+				.description-short {
+					width: 100%;
+
+					@include tablet {
+						width: 20%;
+					}
+
+					@include desktop {
+						width: 30%;
+					}
+
+					.description-wrapper {
+						padding: 5px;
+						color: #fff;
+
+						@include desktop {
+							padding: 30px;
 						}
 
 						img {
-							width: 100%;
-							height: 100%;
+							width: 40px;
+
+							@include desktop {
+								width: 50px;
+							}
 						}
 
-						.description-large {
-							color: #fff;
+						hr {
+							width: 50px;
+							background-color: #fff;
 
 							@include tablet {
-								position: absolute;
-								bottom: 0;
-								right: 0;
-								left: 0;
-								display: flex;
-								justify-content: space-between;
-								align-items: center;
-								padding: 10px 30px;
+								margin: 5px 0 5px 60px;
 							}
 
-							.arrow {
-								font-size: 25px;
-								transition: all ease .3s;
 
-								@include desktop {
-									font-size: 30px;
-								}
+							@include desktop {
+								margin: 15px 0 15px 60px;
 							}
 						}
-					}
-				}
 
-				.grid-item.short {
-					a {
-						display: flex;
-						flex-direction: column;
+					}
+
+					.arrow {
+						font-size: 25px;
+						display: block;
+						color: #fff;
 
 						@include tablet {
-							flex-direction: row-reverse;
-							text-decoration: none;
+							text-align: left;
+							margin-left: 30px;
+							transition: all ease .3s;
 						}
 
-						&:hover,
-						&:focus {
-							.description-short {
-								.arrow {
-									color: #000;
-								}
-							}
-						}
-
-						img {
-							height: 100%;
-							width: 100%;
-
-							@include tablet {
-								width: 80%;
-							}
-
-							@include desktop {
-								width: 70%;
-							}
-						}
-
-						.description-short {
-							width: 100%;
-
-							@include tablet {
-								width: 20%;
-							}
-
-							@include desktop {
-								width: 30%;
-							}
-
-							.description-wrapper {
-								padding: 5px;
-								color: #fff;
-
-								@include desktop {
-									padding: 30px;
-								}
-
-								img {
-									width: 40px;
-
-									@include desktop {
-										width: 50px;
-									}
-								}
-
-								hr {
-									width: 50px;
-									background-color: #fff;
-
-									@include tablet {
-										margin: 5px 0 5px 60px;
-									}
-
-
-									@include desktop {
-										margin: 15px 0 15px 60px;
-									}
-								}
-
-							}
-
-							.arrow {
-								font-size: 25px;
-								display: block;
-								color: #fff;
-
-								@include tablet {
-									text-align: left;
-									margin-left: 30px;
-									transition: all ease .3s;
-								}
-
-								@include desktop {
-									font-size: 30px;
-								}
-							}
+						@include desktop {
+							font-size: 30px;
 						}
 					}
 				}
+			}
+		}
 
-				.grid-item.large1 {
-					grid-column: 1 ;
-					grid-row: 1 / span 3;
-				}
+		.grid-item.large1 {
+			grid-column: 1;
+			grid-row: 1 / span 3;
+		}
 
-				.grid-item.large2 {
-					grid-column: 2;
-					grid-row: 2 / span 3;
-				}
+		.grid-item.large2 {
+			grid-column: 2;
+			grid-row: 2 / span 3;
+		}
 
-				.grid-item.short1 {
-					grid-column: 1;
-					grid-row: 4 / span 1;
-				}
+		.grid-item.short1 {
+			grid-column: 1;
+			grid-row: 4 / span 1;
+		}
 
-				.grid-item.short2 {
-					grid-column: 2;
-					grid-row: 1 / span 1;
-				}
+		.grid-item.short2 {
+			grid-column: 2;
+			grid-row: 1 / span 1;
+		}
 	}
 }
 
 .site-footer {
 	.details-wrapper {
 		position: relative;
-		background: transparent url( '../images/wood.png' ) no-repeat center;
+		background: transparent url('../images/wood.png') no-repeat center;
 		background-size: cover;
 		z-index: 7;
 		padding: 40px 0;
@@ -797,6 +797,7 @@ body {
 				display: flex;
 				justify-content: space-between;
 			}
+
 			.links {
 				width: 100%;
 
